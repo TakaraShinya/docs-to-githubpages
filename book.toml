@@ -1,0 +1,17 @@
+[book]
+title = "mysystem's development book"
+authors = ["XXXX Dev Team <hogehoge@example.com>"]
+language = "jp"
+multilingual = true
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+additional-js = ["mdbook_src/assets/mermaid.min.js", "mdbook_src/assets/mermaid-init.js"]
+
