@@ -1,0 +1,56 @@
+@startuml
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v14.0/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/General/Users.puml
+!include AWSPuml/GroupIcons/Cloud.puml
+!include AWSPuml/NetworkingContentDelivery/ElasticLoadBalancingApplicationLoadBalancer.puml
+!include AWSPuml/Storage/all.puml
+!include AWSPuml/Database/Aurora.puml
+!include AWSPuml/Database/ElastiCache.puml
+!include AWSPuml/Compute/EC2.puml
+!include AWSPuml/Compute/EC2AutoScaling.puml
+!include AWSPuml/MigrationTransfer/TransferFamily.puml
+!include AWSPuml/BusinessApplications/all.puml
+!include AWSPuml/Groups/AWSCloud.puml
+!include AWSPuml/Groups/VPC.puml
+!include AWSPuml/Groups/PublicSubnet.puml
+!include AWSPuml/Groups/PrivateSubnet.puml
+
+skinparam linetype ortho
+Users(sources, "ユーザ", "システムへアクセス")
+SimpleStorageService(s3, "S3", "ファイルアップロード")
+AWSCloudGroup(cloud){
+    VPCGroup(vpc,VPC){
+        ElasticLoadBalancingApplicationLoadBalancer(alb, "ALB", "OIDC Auth")
+        EC2AutoScaling(web_autoscaling, "AutoScaling", "AutoScaling")
+
+        rectangle "AZ-a" <<ap-northeast-1a>> {
+            PublicSubnetGroup(pubsuba,パブリックサブネット-A(192.168.0.0/24)){
+                EC2(ec2a, "web-a", "")
+            }
+            PrivateSubnetGroup(prvsuba,プライベートサブネット-A(192.168.2.0/24)){
+                Aurora(devdb, "dev db", "dev db")
+            }
+        }
+        rectangle "AZ-c" <<ap-northeast-1c>> {
+            PublicSubnetGroup(pubsubc,パブリックサブネット-C(192.168.1.0/24)){
+                EC2(ec2c, "web-c", "")
+            }
+            PrivateSubnetGroup(prvsubc,プライベートサブネット-C(192.168.3.0/24)){
+                ElastiCache(devcache, "dev cache", "dev cache")
+            }
+        }
+        sources --> alb
+        alb --> ec2a
+        alb --> ec2c
+        web_autoscaling --> ec2a
+        web_autoscaling --> ec2c
+        ec2a --> devdb
+        ec2a --> devcache
+        ec2a --> s3
+        ec2c --> devdb
+        ec2c --> devcache
+        ec2c --> s3
+    }
+}
+@enduml

@@ -1,0 +1,68 @@
+@startuml dev-team-chart
+object SRE {
+  # 比嘉さん
+  # 金城さん
+  # 大城さん
+}
+
+package インフラ {
+  object AWS #ccffe5 {
+    #リーダーA
+  }
+  object GCP #ccffe5 {
+    #リーダーB
+  }
+  object TeamA {
+    +メンバー
+    +メンバー
+  }
+  object TeamB {
+    +メンバー
+    +メンバー
+    +メンバー
+  }
+}
+
+package アプリ開発 {
+  object iOS #ccffe5 {
+    #リーダーC
+  }
+  object Android #ccffe5 {
+    #リーダーD
+  }
+  object TeamC1 {
+    +メンバー
+    +メンバー
+  }
+  object TeamC2 {
+    +メンバー
+    -メンバー
+  }
+}
+
+package フロント {
+  object React #ccffe5 {
+    #リーダーE
+    +メンバー
+    +メンバー
+    +メンバー
+    +メンバー
+    +メンバー
+  }
+}
+
+SRE --> AWS
+SRE --> GCP
+SRE --> iOS
+SRE --> Android
+SRE --> React
+
+AWS --> TeamA
+GCP --> TeamB
+iOS --> TeamC1
+iOS --> TeamC2
+
+AWS -[hidden]r- GCP
+iOS -[hidden]r- Android
+
+@enduml
