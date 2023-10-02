@@ -5,4 +5,4 @@
 - [業務フロー図](./rd/WORKFLOW.md)
 - [チーム組織図](./team_chart.md)
 - [スケジュール](./rd/schedule.md)
-- [システム構成図](./ARCHI.md)
+- [システム構成図](./ARCHITECHTURE.md)

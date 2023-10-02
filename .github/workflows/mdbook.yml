@@ -28,6 +28,15 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ~/docs-to-githubpages
+      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
+      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+      DATABASE_NAME: ${{secrets.DATABASE_NAME}}
+      GITHUB_ACTION_JOB: "${{ github.job }}"
+      GITHUB_ACTION_USERNAME: "${{ github.actor }}"
+      GITHUB_ACTION_BRANCH: "${{ github.head_ref }}"
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -55,6 +64,26 @@ jobs:
         uses: holowinski/plantuml-github-action@main
         with:
           args: -v -tsvg src/*.puml
+      - name: Setup tbls
+        uses: k1low/setup-tbls@v1
+      - name: Start Build images and Push to Cycloud CCR
+        run: |
+          docker-compose build --no-cache
+          docker-compose up -d
+      - name: dockerize をインストール
+        run: |
+          wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+          tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+          rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+        env:
+          DOCKERIZE_VERSION: v0.6.1
+      - name: Wait for Start MySQL
+        run: |
+          dockerize -wait tcp://db:3306 -timeout 300s
+          nc -vz db 3306
+
+      - name: Run tbls for generate database document
+        run: tbls doc mysql://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@mydb:3306/${DATABASE_NAME} ./src/er-diagram
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
