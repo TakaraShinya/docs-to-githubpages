@@ -71,7 +71,7 @@ jobs:
           docker-compose build --no-cache
           docker-compose up -d
       - name: Run tbls for generate database document
-        run: tbls doc mysql://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@mydb:3306/${DATABASE_NAME} ./src/er-diagram
+        run: tbls doc mysql://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@127.0.0.1:3306/${DATABASE_NAME} ./src/er-diagram
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
