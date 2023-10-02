@@ -36,7 +36,6 @@ jobs:
       GITHUB_ACTION_JOB: "${{ github.job }}"
       GITHUB_ACTION_USERNAME: "${{ github.actor }}"
       GITHUB_ACTION_BRANCH: "${{ github.head_ref }}"
-      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     steps:
       - uses: actions/checkout@v3
         with:
