@@ -22,7 +22,7 @@ permissions:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   # Build job
@@ -66,22 +66,10 @@ jobs:
           args: -v -tsvg src/*.puml
       - name: Setup tbls
         uses: k1low/setup-tbls@v1
-      - name: Start Build images
+      - name: Start Build images and Run containers
         run: |
           docker-compose build --no-cache
           docker-compose up -d
-      - name: dockerize をインストール
-        run: |
-          wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-          tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-          rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-        env:
-          DOCKERIZE_VERSION: v0.6.1
-      - name: Wait for Start MySQL
-        run: |
-          dockerize -wait tcp://mydb:3306 -timeout 300s
-          nc -vz mydb 3306
-
       - name: Run tbls for generate database document
         run: tbls doc mysql://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@mydb:3306/${DATABASE_NAME} ./src/er-diagram
       - name: Setup Pages
