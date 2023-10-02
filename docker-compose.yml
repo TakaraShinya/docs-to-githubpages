@@ -18,3 +18,19 @@ services:
       - --hostname
       - '0.0.0.0'
 
+  db:
+  image: mysql:8.0
+  container_name: mydb
+  environment:
+    MYSQL_ROOT_USER: root
+    MYSQL_ROOT_PASSWORD: $DATABASE_PASSWORD
+    MYSQL_DATABASE: $DATABASE_NAME
+    MYSQL_USER: $DATABASE_USERNAME
+    MYSQL_PASSWORD: $DATABASE_PASSWORD
+    TZ: Asia/Tokyo
+  volumes:
+    - ./initdb.d:/docker-entrypoint-initdb.d
+  ports:
+    - "3306:3306"
+  command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --default-authentication-plugin=mysql_native_password
+  platform: linux/amd64
