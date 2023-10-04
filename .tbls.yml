@@ -1,0 +1,30 @@
+dsn: mysql://root:${DATABASE_PASSWORD}@127.0.0.1:3306/${DATABASE_NAME}
+# Default is `dbdoc`
+docPath: src/er-diagram
+
+er:
+  # Skip generation of ER diagram
+  # Default is false
+  skip: false
+  # ER diagram image format (`png`, `jpg`, `svg`, `mermaid`)
+  # Default is `svg`
+  format: svg
+  # Add table/column comment to ER diagram
+  # Default is false
+  comment: true
+  # Hide relation definition from ER diagram
+  # Default is false
+  hideDef: false
+  # Show column settings in ER diagram. If this section is not set, all columns will be displayed (default).
+  showColumnTypes:
+    # Show related columns
+    related: true
+    # Show primary key columns
+    primary: true
+  # Distance between tables that display relations in the ER
+  # Default is 1
+  distance: 2
+  # ER diagram (png/jpg) font (font name, font file, font path or keyword)
+  # Default is "" ( system default )
+  font: ""
+

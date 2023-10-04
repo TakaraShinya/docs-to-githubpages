@@ -1,0 +1,31 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<div class="mx-auto container max-w-md shadow-md md:w-3/4">
+    <div class="p-4 bg-gray-100 border-t-2 border-indigo-400 rounded-lg bg-opacity-5">
+        <div class="max-w-sm mx-auto md:w-full md:mx-0">
+            <h1 class="text-2xl font-bold">問い合わせフォーム</h1>
+            <form action="https://ssgform.com/s/3jUQfbf0OB6w" method="post" class="mt-4">
+                <div class="md:flex flex-row md:space-x-4 w-full text-xs">
+                    <div class="w-full">
+                        <label class="text-xs text-gray-600">お名前</label>
+                        <input type="text" name="お名前" placeholder="お名前" class="w-full p-2 border border-gray-300 rounded mt-1" required="required">
+                    </div>
+                </div>
+                <div class="md:flex flex-row md:space-x-4 w-full text-xs mt-4">
+                    <div class="w-full">
+                        <label class="text-xs text-gray-600">メールアドレス</label>
+                        <input type="email" name="メールアドレス" placeholder="メールアドレス" class="w-full p-2 border border-gray-300 rounded mt-1" required="required">
+                    </div>
+                </div>
+                <div class="md:flex flex-row md:space-x-4 w-full text-xs mt-4">
+                    <div class="w-full">
+                        <label class="text-xs text-gray-600">お問い合わせ内容</label>
+                        <textarea name="お問い合わせ内容" placeholder="お問い合わせ内容" class="w-full p-2 border border-gray-300 rounded mt-1" required="required"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="w-full py-3 mt-6 text-center bg-indigo-500 rounded text-white hover:bg-indigo-600">
+                    送信する
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
