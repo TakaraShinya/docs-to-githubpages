@@ -7,6 +7,7 @@
 - [チーム組織図](./team_chart.md)
 - [スケジュール](./rd/schedule.md)
 - [システム構成図](./ARCHITECHTURE.md)
+- [問合せフォーム](./contact.html)
 - [DB構成](./er-diagram/README.md)
   - [auth_group](./er-diagram/auth_group.md)
   - [auth_group_permissions](./er-diagram/auth_group_permissions.md)
