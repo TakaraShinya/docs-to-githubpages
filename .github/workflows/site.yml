@@ -40,7 +40,7 @@ jobs:
       # Deployment job
       deploy:
         environment:
-          name: system-document
+          name: status-page
           url: ${{ steps.deployment.outputs.page_url }}
         runs-on: ubuntu-latest
         needs: build
