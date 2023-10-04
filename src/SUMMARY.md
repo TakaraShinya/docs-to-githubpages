@@ -8,6 +8,7 @@
 - [スケジュール](./rd/schedule.md)
 - [システム構成図](./ARCHITECHTURE.md)
 - [問合せフォーム](./contact.html)
+- [コードエディター](./code_editor.md)
 - [DB構成](./er-diagram/README.md)
   - [auth_group](./er-diagram/auth_group.md)
   - [auth_group_permissions](./er-diagram/auth_group_permissions.md)
