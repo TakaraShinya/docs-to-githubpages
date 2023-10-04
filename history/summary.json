@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Google",
+    "url": "https://www.google.com",
+    "icon": "https://icons.duckduckgo.com/ip3/www.google.com.ico",
+    "slug": "google",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 103,
+    "timeDay": 64,
+    "timeWeek": 85,
+    "timeMonth": 86,
+    "timeYear": 103,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org",
+    "icon": "https://icons.duckduckgo.com/ip3/en.wikipedia.org.ico",
+    "slug": "wikipedia",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 218,
+    "timeDay": 172,
+    "timeWeek": 244,
+    "timeMonth": 239,
+    "timeYear": 218,
+    "dailyMinutesDown": {}
+  }
+]
