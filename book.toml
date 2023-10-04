@@ -15,3 +15,5 @@ command = "mdbook-mermaid"
 [output.html]
 additional-js = ["src/assets/mermaid.min.js", "src/assets/mermaid-init.js"]
 
+[output.html.playground]
+editable = true
