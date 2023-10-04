@@ -1,5 +1,5 @@
 # コードエディター見てみる
-
+## Rustの場合
 ```rust,editable
 fn main() {
     let number = 5;
@@ -7,6 +7,7 @@ fn main() {
 }
 ```
 
+## Pythonの場合
 ```python,editable
 print('Hello World!')
 
