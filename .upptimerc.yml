@@ -7,7 +7,7 @@ sites:
     url: https://www.google.com
   - name: Wikipedia
     url: https://en.wikipedia.org
-  - name: CA ADVANCE Home Page
+  - name: CA ADVANCE Home Page test
     url: https://www.ca-adv.co.jp/
 
 status-website:
