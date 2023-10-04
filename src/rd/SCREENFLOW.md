@@ -1,52 +1,27 @@
 # ■ 画面遷移図
-## ■ 要求仕様概要
-
 ## ■ 利用者
 - 広告部門、コンプライアンス監視業務部
 - 情報システム部
 
-## ■ 必須要件
-### ■ 業務フロー遂行における画面での必須要件
-
-### ■ システム管理画面必須要件
-- XXXXX XXXXXXXXXXXXXXXX
-  - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
----
-## ■画面遷移図
-### ■ 業務フロー遂行における画面での必須要件
+### ■ 業務フロー遂行における画面遷移図
 ```mermaid
-graph LR
+graph TD
+    A[ログイン画面]
+    B[ダッシュボード]
+    C[広告テキストアップロード画面]
+    D[結果レポート画面]
+    E[ユーザ管理画面]
+    F[ユーザ追加/更新/削除画面]
+    G[ログアウト]
 
-  ログイン--ID/パスワード認証 or SSO-->XXXXXXX
-  XXXXXXX-->ログアウト
-
-  subgraph login [ログイン]
-    ログイン
-  end
-
-  subgraph uk [XXXXX管理機能]
-    XXXXXXX
-  end
-
-  subgraph user-menu [ユーザメニュー]
-    ログアウト
-  end
-
-  subgraph header-menu [ヘッダーメニュー]
-    user-menu
-  end
-```
-
-### ■ システム管理画面必須要件
-```mermaid
-graph LR
-
-  ログイン--ID/パスワード認証 or SSO-->XXXXXXXXXXX
-  XXXXXXXXXXXXX-->VVVVVVVVVVVVV
-
-  subgraph login [ログイン]
-    ログイン
-  end
-
+    A -- ログイン --> B
+    B -- 広告テキストアップロード --> C
+    C -- アップロード完了 --> B
+    B -- 結果レポート閲覧 --> D
+    D -- 戻る --> B
+    B -- ユーザ管理 --> E
+    E -- ユーザ追加/更新/削除 --> F
+    F -- 完了 --> E
+    E -- 戻る --> B
+    B -- ログアウト --> G
 ```
