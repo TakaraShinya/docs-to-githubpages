@@ -43,18 +43,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.ca-adv.co.jp.ico",
     "slug": "ca-advance-home-page-test",
     "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 2597,
-    "timeDay": 2936,
-    "timeWeek": 2294,
-    "timeMonth": 2597,
-    "timeYear": 2597,
+    "uptime": "99.95%",
+    "uptimeDay": "99.06%",
+    "uptimeWeek": "99.87%",
+    "uptimeMonth": "99.95%",
+    "uptimeYear": "99.95%",
+    "time": 2511,
+    "timeDay": 1936,
+    "timeWeek": 2103,
+    "timeMonth": 2511,
+    "timeYear": 2511,
     "dailyMinutesDown": {
-      "2023-10-21": 0
+      "2023-10-21": 13
     }
   }
 ]
