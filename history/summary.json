@@ -13,7 +13,7 @@
     "time": 131,
     "timeDay": 84,
     "timeWeek": 86,
-    "timeMonth": 149,
+    "timeMonth": 142,
     "timeYear": 131,
     "dailyMinutesDown": {
       "2023-10-16": 21
@@ -42,17 +42,19 @@
     "url": "https://www.ca-adv.co.jp/",
     "icon": "https://icons.duckduckgo.com/ip3/www.ca-adv.co.jp.ico",
     "slug": "ca-advance-home-page-test",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 2343,
-    "timeDay": 1640,
-    "timeWeek": 2429,
-    "timeMonth": 2178,
-    "timeYear": 2343,
-    "dailyMinutesDown": {}
+    "time": 2310,
+    "timeDay": 1251,
+    "timeWeek": 2233,
+    "timeMonth": 2139,
+    "timeYear": 2310,
+    "dailyMinutesDown": {
+      "2023-11-07": 0
+    }
   }
 ]
