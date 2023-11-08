@@ -42,17 +42,19 @@
     "url": "https://www.ca-adv.co.jp/",
     "icon": "https://icons.duckduckgo.com/ip3/www.ca-adv.co.jp.ico",
     "slug": "ca-advance-home-page-test",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 2296,
-    "timeDay": 1612,
-    "timeWeek": 2229,
-    "timeMonth": 2123,
-    "timeYear": 2296,
-    "dailyMinutesDown": {}
+    "time": 2267,
+    "timeDay": 1437,
+    "timeWeek": 2097,
+    "timeMonth": 2090,
+    "timeYear": 2267,
+    "dailyMinutesDown": {
+      "2023-11-08": 0
+    }
   }
 ]
