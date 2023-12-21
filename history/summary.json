@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.98%",
-    "time": 111,
-    "timeDay": 58,
-    "timeWeek": 131,
-    "timeMonth": 90,
-    "timeYear": 111,
+    "time": 114,
+    "timeDay": 408,
+    "timeWeek": 134,
+    "timeMonth": 102,
+    "timeYear": 114,
     "dailyMinutesDown": {
       "2023-10-16": 21
     }
@@ -25,16 +25,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/en.wikipedia.org.ico",
     "slug": "wikipedia",
     "status": "up",
-    "uptime": "99.98%",
+    "uptime": "99.99%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.98%",
-    "time": 203,
-    "timeDay": 131,
-    "timeWeek": 154,
-    "timeMonth": 194,
-    "timeYear": 203,
+    "uptimeYear": "99.99%",
+    "time": 201,
+    "timeDay": 65,
+    "timeWeek": 141,
+    "timeMonth": 183,
+    "timeYear": 201,
     "dailyMinutesDown": {
       "2023-11-15": 17
     }
@@ -50,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.96%",
-    "time": 2318,
-    "timeDay": 3529,
-    "timeWeek": 2426,
-    "timeMonth": 2374,
-    "timeYear": 2318,
+    "time": 2320,
+    "timeDay": 2501,
+    "timeWeek": 2514,
+    "timeMonth": 2381,
+    "timeYear": 2320,
     "dailyMinutesDown": {
       "2023-11-08": 44
     }
