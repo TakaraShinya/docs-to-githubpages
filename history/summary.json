@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.98%",
-    "time": 111,
-    "timeDay": 81,
+    "time": 110,
+    "timeDay": 59,
     "timeWeek": 79,
-    "timeMonth": 103,
-    "timeYear": 111,
+    "timeMonth": 102,
+    "timeYear": 110,
     "dailyMinutesDown": {
       "2023-10-16": 21
     }
@@ -31,9 +31,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
     "time": 199,
-    "timeDay": 96,
-    "timeWeek": 158,
-    "timeMonth": 175,
+    "timeDay": 174,
+    "timeWeek": 155,
+    "timeMonth": 174,
     "timeYear": 199,
     "dailyMinutesDown": {
       "2023-11-15": 17
@@ -45,16 +45,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.ca-adv.co.jp.ico",
     "slug": "ca-advance-home-page-test",
     "status": "up",
-    "uptime": "99.96%",
+    "uptime": "99.97%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.96%",
-    "time": 2351,
-    "timeDay": 1614,
-    "timeWeek": 2704,
-    "timeMonth": 2442,
-    "timeYear": 2351,
+    "uptimeYear": "99.97%",
+    "time": 2349,
+    "timeDay": 2201,
+    "timeWeek": 2685,
+    "timeMonth": 2434,
+    "timeYear": 2349,
     "dailyMinutesDown": {
       "2023-11-08": 44
     }
